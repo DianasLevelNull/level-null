@@ -1,8 +1,8 @@
-# Level Null - Dianas Programmierentwicklung
+# 🔜🎮 Level Null - Dianas Programmierentwicklung
 
-Willkommen in meinem privaten Projekt. Wenn du hier bist, weißt du wer ich bin, denn ich habe dich hierher eingeladen ;) Aber was ist das hier überhaupt? Hier entsteht eine Plattform für selbst entwickelte Spiele, Tutorials nachgebauten Projekten (wird gekennzeichnet) und allgemein Raum für meine kreativen programmier-Experimente bzw eine grobe Übersicht meiner derzeitigen Fähikeiten. Unterstützt von Copilot
+Willkommen in meinem privaten Projekt. Wenn du hier bist, weißt du wer ich bin, denn ich habe dich hierher eingeladen ;) Aber was ist das hier überhaupt? Hier entsteht eine Plattform für selbst entwickelte Spiele*, und allgemein Raum für meine kreativen programmier-Experimente bzw eine grobe Übersicht meiner derzeitigen Fähikeiten. Unterstützt von Copilot
 
-## Struktur
+## 📚 Struktur
 - 'index.html' - Startseite
 - 'style.css' - Design
 - 'assets/'  - Bilder, Sounds
@@ -21,7 +21,7 @@ Willkommen in meinem privaten Projekt. Wenn du hier bist, weißt du wer ich bin,
 
 ---
 
-## 🧪 Technologien
+## 🛠️ Technologien
 
 - HTML, CSS, JavaScript
 - Java (für Spiele mit JavaFX)
@@ -31,7 +31,7 @@ Willkommen in meinem privaten Projekt. Wenn du hier bist, weißt du wer ich bin,
 
 ---
 
-## 🧠 Style Guide
+## 🪧 Style Guide
 
 - Dateinamen: `kebab-case`
 - CSS-Klassen: `kebab-case`
