@@ -1,0 +1,28 @@
+/* Fun style: verspielte Farben, größere Schrift, andere Schriftart */
+body {
+  background: linear-gradient(135deg, #1b003b, #3b0a5f 60%, #8b2b8f);
+  color: #fff7d6;
+  font-family: 'Comic Sans MS', 'Chalkboard', 'Comic Neue', sans-serif;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+h1, h2, h3 {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+a {
+  color: #ffd86b;
+}
+
+nav ul {
+  gap: 1.2rem;
+}
+
+.content {
+  padding: 28px;
+  line-height: 1.6;
+}
