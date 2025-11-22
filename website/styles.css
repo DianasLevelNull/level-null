@@ -1,0 +1,81 @@
+body {
+    margin: 20;
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    padding-left: 30px;
+}
+      
+.gradient-text h1,
+.gradient-text h2,
+.gradient-text h3,
+.gradient-text p,
+.gradient-text a,
+.gradient-text li {
+    /* Blue area narrowed: rgb(11,147,226) start, then a short blue band, then blueviolet etc. */
+    background: linear-gradient(180deg, rgb(11, 147, 226), blue, blueviolet 30%, limegreen 75%, darkgreen 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.content,
+.footer {
+    padding: 20px;
+}
+
+.small {            
+    font-size: small;   
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+.gradient-text nav ul {
+    list-style: none;         /* entfernt die Punkte */
+    display: flex;            /* zeigt die Liste horizontal */
+    gap: 20px;                /* Abstand zwischen den Links */
+    padding: 0;               /* entfernt Standard-Einrückung */
+    margin: 0;
+    align-items: center;
+}
+
+/* Push last nav item (toggle) to the right */
+.gradient-text nav ul .nav-toggle {
+    margin-left: auto;
+}
+
+.nav-toggle button {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: inherit;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.nav-toggle button:focus {
+    outline: 2px solid rgba(255,255,255,0.12);
+}
+
+/* Make hover rule specific enough to override .gradient-text a (which sets color transparent)
+   and also set -webkit-text-fill-color so WebKit browsers show the hover color. */
+.gradient-text nav li a:hover {
+    color: hsl(189, 100%, 50%);
+    -webkit-text-fill-color: hsl(189, 100%, 50%);
+    text-decoration: underline;
+}
