@@ -27,6 +27,7 @@ Willkommen in meinem privaten Projekt. Wenn du hier bist, weißt du wer ich bin,
 - Java (für Spiele mit JavaFX)
 - PHP (später für Highscore-Systeme)
 - Git & GitHub für Versionskontrolle ("https://github.com/DianasLevelNull/level-null")
+        (URL "https://dianaslevelnull.github.io/level-null/" )
 - Laragon als lokaler Webserver
 
 ---
