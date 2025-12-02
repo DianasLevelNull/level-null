@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    padding-left: 50px;
+    padding-right: 200px;
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+/* .gradfient-text:
+        Viewport-fixierter Farbverlauf, sodass derselbe Verlauf über alle Textblöcke sichtbar ist.
+        Verwendet , damit verschiedene Elemente dieselbe Farbverlaufszuordnung teilen.
+        gezielt Textelemente, um zu vermeiden, dass Bilder oder andere nicht-textliche Elemente betroffen sind */
+
+.gradient-text h1,
+.gradient-text h2,
+.gradient-text h3,
+.gradient-text p,
+.gradient-text a,
+.gradient-text li {
+    background: linear-gradient(180deg, rgb(11, 147, 226), blue, blueviolet 30%, limegreen 75%, darkgreen 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.content,
+.footer {
+    padding: 1.5em;
+}
+
+.small {
+    font-size: small;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.gradient-text nav ul {
+    list-style: none;
+    /* entfernt die Punkte */
+    display: flex;
+    /* zeigt die Liste horizontal */
+    gap: 20px;
+    /* Abstand zwischen den Links */
+    padding: 0;
+    /* entfernt Standard-Einrückung */
+    margin: 10px;
+
+}
+
+/* Make hover rule specific enough to override .gradient-text a (which sets color transparent)
+   and also set -webkit-text-fill-color so WebKit browsers show the hover color. */
+.gradient-text nav li a:hover {
+    color: hsl(189, 100%, 50%);
+    -webkit-text-fill-color: hsl(189, 100%, 50%);
+    text-decoration: underline;
+}

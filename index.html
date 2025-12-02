@@ -53,7 +53,7 @@
             <h2>Kontakt</h2>
             <p>Hast du Fragen? Kontaktiere uns unter
                 <a href="mailto:lyrandana@googlemail.com">
-                    <img src="../assets/website/icons/icons8-gmail-logo-64.png" alt=""
+                    <img src="assets/website/icons/icons8-gmail-logo-64.png" alt=""
                         style="height:1.5em; vertical-align: bottom">
                     lyrandana@googlemail.com</a>
             </p>
@@ -69,7 +69,12 @@
                 <a target="_blank" href="https://icons8.com/icon/48165/gmail-logo">Gmail Logo</a> icon by <a
                     target="_blank" href="https://icons8.com">Icons8</a>
             </p>
-            <p>&copy; 2024 Level Null. Alle Rechte vorbehalten.</p>
+            <p>&copy; <span id="year"></span> Level Null. Alle Rechte vorbehalten.</p>
+        
         </div>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear(); 
+        </script>
     </footer>
+    
 </body>

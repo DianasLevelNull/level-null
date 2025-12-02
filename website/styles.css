@@ -1,79 +1,242 @@
-body {
+/* farbpalette */
+:root {
+    --bg-one: #bccff1;
+    --bg-two: #e9e6e6;
+    --bg-accent: #e6f1de;
+    --bg-tree: #5d6294;
+    --text-one: #1a2f4a;
+    --text-two: #4a5f7f;
+    --accent-one: #0066cc;
+    --accent-two: #00a86b;
+    --border: #74b5f7;
+    --accent-light: #d1e1f0;
+     --shadow-light: 0 20px 80px rgba(26, 47, 74, 0.08);
+     --shadow-medium: 0 8px 24px rgba(26, 47, 74, 0.12);
+}
 
-    background-color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--bg-one) 0%, var(--bg-accent) 50%, var(--bg-tree) 100%);
+    background-attachment: fixed;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    color: var(--text-one);
+}
+.content{
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--bg-two);
+    border-radius: 16px;
+    box-shadow: var(--shadow-medium);
+    border-left: 4px solid var(--accent-one);
+    transition: all 1s ease;
+    position: relative;
+    overflow:visible;
+}
+
+.content > * {
+    position: relative;
+    z-index: 1;
+}
+.content:hover {
+    box-shadow: var(--shadow-light);
+    transform: translateY(-5px);
+}
+
+/* Typografie */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-one);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-one);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-one), var(--accent-two));
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--accent-two);
 }
 
 p {
-    padding-left: 50px;
-    padding-right: 200px;
-    text-align: justify;
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 0.5em;
-    padding-bottom: 0.5em;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-two);
 }
 
+/* Links */
+a {
+    color: var(--accent-one);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
 
-/* .gradfient-text:
-        Viewport-fixierter Farbverlauf, sodass derselbe Verlauf über alle Textblöcke sichtbar ist.
-        Verwendet , damit verschiedene Elemente dieselbe Farbverlaufszuordnung teilen.
-        gezielt Textelemente, um zu vermeiden, dass Bilder oder andere nicht-textliche Elemente betroffen sind */
+a:hover {
+    color: var(--accent-two);
+    text-decoration: underline;
+}
 
-.gradient-text h1,
-.gradient-text h2,
-.gradient-text h3,
-.gradient-text p,
-.gradient-text a,
-.gradient-text li {
-    background: linear-gradient(180deg, rgb(11, 147, 226), blue, blueviolet 30%, limegreen 75%, darkgreen 100%);
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+/* Listen */
+ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+ul li {
+    margin-bottom: 1rem;
+    color: var(--text-two);
+    transition: all 0.2s ease;
+    padding-left: 0.5rem;
+}
+ul li:hover {
+    color: var(--accent-one);
+    transform: translateX(3px);
+}
+
+ul li::marker {
+    color: var(--accent-two);
     font-weight: bold;
 }
 
-.content,
-.footer {
-    padding: 1.5em;
-}
-
-.small {
-    font-size: small;
-}
-
+/* Header und Navigation */
 .header {
+    background: var(--bg-two);
+    box-shadow: var(--shadow-light);
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    border-bottom: 2px solid var(--border) ;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 3em;
+    font-size: 2.5rem;
+    color: var(--accent-one);
+    font-weight: 700;
 }
 
 .gradient-text nav ul {
     list-style: none;
-    /* entfernt die Punkte */
-    display: flex;
-    /* zeigt die Liste horizontal */
-    gap: 20px;
-    /* Abstand zwischen den Links */
-    padding: 0;
-    /* entfernt Standard-Einrückung */
-    margin: 10px;
-
+   display: flex;
+   gap: 2rem;
+   padding: 0;
+   margin: 0;
+   flex-wrap: wrap;
 }
 
-/* Make hover rule specific enough to override .gradient-text a (which sets color transparent)
-   and also set -webkit-text-fill-color so WebKit browsers show the hover color. */
-.gradient-text nav li a:hover {
-    color: hsl(189, 100%, 50%);
-    -webkit-text-fill-color: hsl(189, 100%, 50%);
-    text-decoration: underline;
+.gradient-text nav li a {
+    font-size: 1.1rem;
+    font-weight: 500;
+   color: var(--text-one);   
+   padding: 0.5rem 1rem;
+   border-radius: 6px;
+}
+
+.gradient-text nav li a:hover{
+    background: var(--accent-light);
+    color: var(--accent-one);
+    text-decoration: none;
+     transition: all 0.3s ease;
+    position: relative;
+}
+
+.gradient-text nav li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-one), var(--accent-two));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.gradient-text nav li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Footer */
+.footer {
+    background: var(--bg-two);
+    border-top: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+    text-align: center;
+    padding-left: 2rem ;
+}
+.small {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.footer img {
+    max-width: 1.5em;
+    height: auto;
+    vertical-align: bottom;
+    margin: 0 0.5em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .gradient-text nav ul {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
 }

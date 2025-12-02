@@ -21,6 +21,7 @@
     </style>
 </head>
 
+
 <body>
     <header class="header">
         <div class="gradient-text">
@@ -37,12 +38,12 @@
     </header>
     <main class="content">
         <div class="gradient-text">
-            <p> Ich freue mich, dass du beim Stöbern sogar diesen Ort gefunden hast. Darum habe ich dir einen Rückweg
-                gebaut ;) </p>
-
+            
             <label for="password">Passwort eingeben:</label>
             <input type="password" id="password" name="password" />
             <button onclick="checkPassword()">bestätigen</button>
+            <br /><br />
+        
             <div id="privatBereich">
                 <h2>Willkommen im privaten Bereich!</h2>
                 <p>Eine kleine Spielerei mit einem fest im Code verankerten Passwort. *facepalm* Selbst für mein
@@ -90,14 +91,31 @@
                     <li>kleinere Reparaturen bezüglich position von "body" und "main"</li>
                     <li>Plan für die nächste Sitzung: </li>
                     <li>helles Theme angehen mit dem toggle</li>
-                </ul>>
+                </ul>
+                <h2><strong>02.12.2025</strong></h2>
+                <ul>
+                    <li>seit Tagen an dem hellen Design gefeilt</li>
+                    <li>Plan für die nächste Sitzung:
+                        <ul>
+                            <li>Toggle funktionsfähig machen</li>
+                            <li>evtl. Kontaktformular einbauen</li>
+                        </ul>
+                    </li>
+                </ul>
+                
             </div>
+                    <footer class="footer">
+                <div class="gradient-text">
+                    <p>&copy; <span id="year"></span> Level Null. Alle Rechte vorbehalten.</p>
+                </div>
+
+            </footer>
         </div>
         <script>
             function checkPassword() {
                 const passwordInput = document.getElementById('password').value;
                 const privatBereich = document.getElementById('privatBereich');
-                const correctPassword = 'levelnull2025'; // Setze hier dein gewünschtes Passwort
+                const correctPassword = 'levelnull2025'; // maximale Sicherheit: unverschlüsselte Speicherung direkt vor Ort XD
 
                 if (passwordInput === correctPassword) {
                     privatBereich.style.display = 'block';
@@ -105,6 +123,8 @@
                     alert('Netter Versuch.');
                 }
             }
+
+            document.getElementById("year").textContent = new Date().getFullYear(); 
         </script>
     </main>
 </body>
