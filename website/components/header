@@ -1,0 +1,13 @@
+   <header class="header">
+        <div class="gradient-text">
+            <h1 class="gradient-text">Level Null</h1>
+            <nav class="gradient-text">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="website/pages/about.html">Über mich</a></li>
+                    <li><a href="website/pages/contact.html">Kontakt</a></li>
+                    <li><a href="website/pages/future.html">Pläne und Ideen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>

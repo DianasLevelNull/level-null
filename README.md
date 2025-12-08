@@ -15,7 +15,7 @@ Willkommen in meinem privaten Projekt. Wenn du hier bist, weißt du wer ich bin,
 - [x] Projektstruktur aufsetzen
 - [x] Verbindung mit Git und GitHub herstellen 
 - [ ] Website bauen
-- [ ] erstes Spiel entwickeln
+- [x] erstes Spiel entwickeln
 - [ ] erstes Spiel integrieren
 - [ ] Mobile Version vorbereiten
 

@@ -7,26 +7,14 @@
     <meta name="description" content="Spiele programmieren gelernt von level null an" />
     <meta name="author" content="Diana / Level Null" />
     <title>Level Null - Über mich</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="pages.css"> <!-- oder about.css -->
+    <link rel="stylesheet" href="../themes/styles.css">
     <link rel="icon" type="image/png" href="../assets/website/icons/icons8-controller-32.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/website/icons/icons8-controller-32.png">
+    
 </head>
 
 <body>
-    <header class="header">
-        <div class="gradient-text">
-            <h1 class="gradient-text">Über mich</h1>
-            <nav class="gradient-text">
-                <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="about.html">Über mich</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li><a href="future.html">Pläne und Ideen</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div id="header-container"></div>
 
     <main class="content">
         <div class="gradient-text">
@@ -50,18 +38,14 @@
                 Chance ist.
             </p>
 
-       
+       </div>
         <footer class="footer">
         <div class="gradient-text">
             <p>&copy; <span id="year"></span> Level Null. Alle Rechte vorbehalten.</p>
-        </div>
-        <script>
-            document.getElementById("year").textContent = new Date().getFullYear(); 
-        </script>
-    
+        </div>    
     </footer> 
-</div>
+
     </main>
 </body>
-
+<script src="../script.js"></script>
 </html>

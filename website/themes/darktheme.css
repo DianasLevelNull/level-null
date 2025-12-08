@@ -4,8 +4,8 @@ body {
 }
 
 p {
-    padding-left: 50px;
-    padding-right: 200px;
+    padding-left: 3%;
+    padding-right: 3%;
     text-align: justify;
     font-size: 1.2em;
     line-height: 1.6;
@@ -24,7 +24,9 @@ p {
 .gradient-text h3,
 .gradient-text p,
 .gradient-text a,
-.gradient-text li {
+.gradient-text li,
+.gradient-text footer p,
+.gradient-text label{
     background: linear-gradient(180deg, rgb(11, 147, 226), blue, blueviolet 30%, limegreen 75%, darkgreen 100%);
     background-attachment: fixed;
     background-size: cover;
@@ -33,6 +35,10 @@ p {
     background-clip: text;
     color: transparent;
     font-weight: bold;
+}
+
+.link-groups {
+    color:darkgreen
 }
 
 .content,
@@ -56,17 +62,62 @@ p {
     font-size: 3em;
 }
 
-.gradient-text nav ul {
-    list-style: none;
-    /* entfernt die Punkte */
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background: transparent;
+    border: 2px solid #0066cc;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
     display: flex;
-    /* zeigt die Liste horizontal */
-    gap: 20px;
-    /* Abstand zwischen den Links */
+    align-items: center;
+    justify-content: center;
     padding: 0;
-    /* entfernt Standard-Einrückung */
-    margin: 10px;
+}
+.screenshot-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    width: 200px;
+    height: 220px;
+    border: 1px, solid, #b013ee;
+}
 
+.screenshot-btn img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.screenshot-btn span {
+    display: block;
+    font-weight: bold;
+}
+.theme-toggle-btn:hover {
+    background: #d9e9f8;
+    color: black;
+    transform: scale(1.1);
+}
+
+#privatBereich {
+            display: none;
+            
+            padding: 20px;
+            border: 2px solid #b013ee;
+
+        }
+
+.gradient-text nav ul {
+    
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 20px;
 }
 
 /* Make hover rule specific enough to override .gradient-text a (which sets color transparent)
@@ -75,4 +126,11 @@ p {
     color: hsl(189, 100%, 50%);
     -webkit-text-fill-color: hsl(189, 100%, 50%);
     text-decoration: underline;
+}
+.footer p {
+    font-style: italic;
+    width: calc(100%-20px);
+    text-align: right;
+    font-size: small;
+    color: transparent;
 }
