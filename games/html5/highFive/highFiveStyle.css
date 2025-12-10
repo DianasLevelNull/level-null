@@ -9,7 +9,7 @@ body {
     margin-top: 3rem;
 }
 
-.karten {
+.karte {
     display: flex;
     justify-content: center;
     margin: 20px;
@@ -32,30 +32,46 @@ button:hover {
     color: #2b1010;
 }
 
-.karten button {
+.karte button {
     width: 200px;
     height: 300px;
     margin: 10px;
-    background: rgb(167, 165, 165);
+    background-image: url("../../../assets/games/images/icons8-muster-96.png");
+    background-size:140% 140%;
+    background-position: center;
     border: 2px solid #333;
     border-radius: 10px;
-    font-size: 5em;
+    font-size:9em;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: rgb(0, 0, 0);
     cursor: pointer;
+    position: relative;
 }
-.karten button:hover {
+.karte button:hover {
         background: #7644a5;
         color: white;
     }
 
-.karten button.selected {
-    border: 4px solid #ffd700;
-    box-shadow: 0 0 16px rgba(255, 215, 0, 0.8);
+.karte button::before,
+.karte button::after {
+    content: attr(data-value);
+    position: absolute;
+    font-size: 20px;
+}
+.karte button::before{
+    top: 5px; left: 5px;
+}
+.karte button::after{
+    bottom: 5px; right: 5px;
 }
 
+.karte button.selected {
+    border: 3px solid #d9f755;
+    box-shadow: 0 0 16px rgba(111, 240, 111, 0.8);
+    background: rgb(148, 154, 158);
+}
 
 .punktestand {
    display: flex;
@@ -72,15 +88,19 @@ button:hover {
     background: transparent;
 }
 
-.kreisA.active {background: #34a134;}
-.kreisB.active {background: #db3e4b;}
-#kreisC1.spielerGewinnt {background: #34a134;}
-#kreisC1.computerGewinnt {background: #db3e4b;}
-
-
 #nachricht {
     margin: 20px;
     font-weight: bold;
     font-size: large;
     color: #127e12;
 }
+
+
+
+/* durch Effekte von js */
+.kreisA.active {background: #34a134;}
+.kreisB.active {background: #db3e4b;}
+#kreisC1.spielerGewinnt {background: #34a134;}
+#kreisC1.computerGewinnt {background: #db3e4b;}
+.karte button.umgedreht {background: rgb(148, 154, 158);}
+

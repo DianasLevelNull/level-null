@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Spiele programmieren gelernt von level null an" />
+    <meta name="author" content="Diana / Level Null" />
+    <title>High Five</title>
+    <link rel="stylesheet" href="highFiveStyle.css">
+</head>
+
+<body>
+    <div id="header-container">
+        <li><a href="..\..\..\index.html">Home</a></li>
+    </div>
+
+    <h1>High Five Kartenspiel</h1>
+
+    <div id="spiel">
+
+        <button id="geben">Karten austeilen</button>
+
+        <div class="karte">
+            <button id="karteLinks" class="karte">?</button>
+            <button id="karteRechts" class="karte">?</button>
+        </div>
+
+        <div class="punktestand">
+            <div class="kreis kreisA" id="kreisA1"></div>
+            <div class="kreis kreisA" id="kreisA2"></div>
+            <div class="kreis kreisA" id="kreisA3"></div>
+            <div class="kreis kreisA" id="kreisA4"></div>
+            <div class="kreis kreisAB" id="kreisC1"></div>
+            <div class="kreis kreisB" id="kreisB4"></div>
+            <div class="kreis kreisB" id="kreisB3"></div>
+            <div class="kreis kreisB" id="kreisB2"></div>
+            <div class="kreis kreisB" id="kreisB1"></div>
+        </div>
+
+        <div id="nachricht"></div>
+    </div>
+
+    <script src="highFive.js"></script>
+</body>
